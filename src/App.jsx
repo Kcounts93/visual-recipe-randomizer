@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ShuffleButton from "./components/shuffleButton";
 import RecipeCard from "./components/recipeCard";
+import FilterButtons from "./components/filterButtons";
+import "./css";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <div className='App'>
+      <FilterButtons />
       <RecipeCard recipe={currentRecipe} />
       <ShuffleButton onShuffle={handleShuffle} />
     </div>
