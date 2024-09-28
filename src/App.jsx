@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ShuffleButton from "./components/shuffleButton";
 import RecipeCard from "./components/recipeCard";
 import FilterButtons from "./components/filterButtons";
-import "./css";
+import "./css/App.css";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
