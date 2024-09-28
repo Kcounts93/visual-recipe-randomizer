@@ -29,6 +29,13 @@ function App() {
     fetchRecipes();
   }, [EDAMAM_API_ID, EDAMAM_API_KEY]);
 
+  const handleShuffle = () => {
+    if (recipes.length > 0) {
+      const randomRecipe = recipes[Math.floor(Math.random() * recipes.length)];
+      setCurrentRecipe(randomRecipe);
+    }
+  };
+
   return (
     <div className='App'>
       <RecipeCard recipe={currentRecipe} />
